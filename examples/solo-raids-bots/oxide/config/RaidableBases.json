@@ -1,0 +1,22 @@
+{
+  "Enabled": true,
+  "Use TruePVE": true,
+  "Difficulty Profiles": ["Easy","Medium","Hard"],
+  "Scheduled Events": {
+    "Enabled": true,
+    "Use Real Time": false,
+    "Min Time Between Spawns (minutes)": 25,
+    "Max Time Between Spawns (minutes)": 35,
+    "Maximum Concurrent Bases": 2
+  },
+  "NPCs": {
+    "Spawn Scientists": true,
+    "Min NPCs": 4,
+    "Max NPCs": 10
+  },
+  "Despawn": {
+    "Despawn Minutes After Completed": 15,
+    "Despawn Minutes If Uncontested": 60
+  },
+  "Chat Notifications": true
+}
