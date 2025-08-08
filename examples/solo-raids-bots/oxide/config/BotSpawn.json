@@ -1,0 +1,9 @@
+{
+  "Global": { "Bots_Drop_Weapons": false, "Ignore_Animals": true },
+  "Roads": { "Enabled": true, "Murderer_Amounts": 0, "Scientist_Amounts": 3 },
+  "Monuments": {
+    "Launch Site": { "Enabled": true, "Bots": 8 },
+    "Airfield":     { "Enabled": true, "Bots": 6 },
+    "Train Yard":   { "Enabled": true, "Bots": 6 }
+  }
+}

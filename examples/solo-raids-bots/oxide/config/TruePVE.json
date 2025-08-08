@@ -1,0 +1,14 @@
+{
+  "useZones": false,
+  "defaultAllowDamage": true,
+  "rules": [
+    { "name": "no-pvp", "description": "bloquea PvP", "priority": 1,
+      "flags": ["HumanHuman", "HurtPlayer"],
+      "allow": false
+    },
+    { "name": "pve-ok", "description": "NPCs permitidos", "priority": 2,
+      "flags": ["HumanNPC"],
+      "allow": true
+    }
+  ]
+}

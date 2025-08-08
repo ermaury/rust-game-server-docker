@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  rust:
+    image: pfeiffermax/rust-game-server:latest-oxide
+    container_name: rust-solo-raids-bots
+    restart: unless-stopped
+    ports:
+      - "28015:28015/udp"   # game
+      - "28016:28016"       # RCON
+    environment:
+      RUST_SERVER_STARTUP_ARGUMENTS: >-
+        -batchmode -nographics +server.port 28015 +server.level "Procedural Map"
+        +server.seed 123456 +server.worldsize 3500
+        +server.identity "solo_server" +server.hostname "Rust Solo Raids & Bots"
+        +server.description "Servidor privado con raids, bots y eventos"
+        +rcon.port 28016 +rcon.password "CambialaYA"
+        +server.secure 1
+      RUST_SERVER_MAXPLAYERS: "1"
+      RUST_SERVER_TAGS: "pve,solo,oxide,events,raids"
+    volumes:
+      - ./server:/steamcmd/rust
+      - ./oxide/plugins:/steamcmd/rust/oxide/plugins
+      - ./oxide/config:/steamcmd/rust/oxide/config
+    stop_grace_period: 30s
